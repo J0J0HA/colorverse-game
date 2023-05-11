@@ -1,0 +1,3 @@
+[submodule "jsmodal"]
+	path = jsmodal
+	url = https://github.com/J0J0HA/js-modal-lib.git
