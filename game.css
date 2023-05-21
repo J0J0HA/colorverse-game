@@ -1,0 +1,52 @@
+.cv-preview {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 50px;
+    height: 50px;
+}
+
+.cv-cells {
+    display: grid;
+    grid-template-columns: repeat(var(--amount), 1fr);
+    width: calc(var(--cell-size) * var(--amount));
+    border: 1px solid var(--cell-border-color);
+    aspect-ratio: 1;
+}
+
+.cv-cells.cv-won .cv-cell {
+    animation: won 1s ease-in-out var(--anim-delay) infinite normal forwards;
+}
+
+.cv-cell {
+    height: var(--cell-size);
+    width: var(--cell-size);
+    background-color: var(--cell-color);
+    border: 1px solid var(--cell-border-color);
+}
+
+.cv-cell.cv-lost-cause {
+    animation: lost 1s ease-in-out 0s infinite normal forwards;
+}
+
+@keyframes lost {
+	100%, 0% {
+		opacity: 1;
+        box-shadow: inset 0px 0px 0px 0px red, 0px 0px 10px 5px red;
+	}
+
+	50% {
+		opacity: 0.6;
+        box-shadow: inset 0px 0px 10px 5px red, 0px 0px 0px 0px red;
+	}
+}
+
+@keyframes won {
+	100%, 0% {
+		background-color: initial;
+	}
+
+	50% {
+		background-color: rgb(109, 215, 109);
+	}
+}

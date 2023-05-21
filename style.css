@@ -1,0 +1,12 @@
+:root {
+    --color: black;
+    --bg-color: white;
+}
+
+html,
+body {
+    min-height: 100svh;
+    min-width: 100svh;
+    background-color: var(--bg-color);
+    color: var(--color);
+}
